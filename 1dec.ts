@@ -1,7 +1,6 @@
-// npx ts-node 1dec.ts
-const fs = require("fs");
-// const data: string = fs.readFileSync("./samples/1dec.txt", "utf8");
-const data: string = fs.readFileSync("./data/1dec.txt", "utf8");
+import getData from "./data";
+const [_ts, _file, date, test] = process.argv;
+const data: string = getData(date, test);
 
 console.time("part 1");
 const numbers = data
